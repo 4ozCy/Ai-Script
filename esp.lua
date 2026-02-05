@@ -142,7 +142,7 @@ local function removeEsp(player)
     end
 end
 
-local MAX_ESP_DISTANCE = 100000
+local MAX_ESP_DISTANCE = 9e9
 
 local function updateEsp(player, esp)
     local success, err = pcall(function()
@@ -339,15 +339,6 @@ UIGradient.Color = ColorSequence.new{
 }
 UIGradient.Rotation = 45
 
-local Checkmark = Instance.new("TextLabel", InnerCircle)
-Checkmark.Size = UDim2.new(0.8, 0, 0.8, 0)
-Checkmark.Position = UDim2.new(0.1, 0, 0.1, 0)
-Checkmark.BackgroundTransparency = 1
-
-Checkmark.TextScaled = true
-Checkmark.Font = Enum.Font.GothamBold
-Checkmark.TextColor3 = Color3.fromRGB(255, 255, 255)
-Checkmark.ZIndex = 12
 local isDragging = true
 local dragInput, mousePos, framePos
 
